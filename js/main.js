@@ -115,5 +115,44 @@
         }]
     });
     
+    var $question = $('.question');
+	var $answer = $('.answer');
+
+	$question.click(function(){
+
+		// Hide all answers
+		$answer.slideUp();
+
+		// Check if this answer is already open
+		if($(this).hasClass('open')){
+			// If already open, remove 'open' class and hide answer
+			$(this).removeClass('open')
+			       .next($answer).slideUp();
+		// If it is not open...
+		}else{
+			// Remove 'open' class from all other questions
+			$question.removeClass('open');
+			// Open this answer and add 'open' class
+			$(this).addClass('open')
+			       .next($answer).slideDown();
+				   
+		}
+	});
+
+    // $(document).ready(function(){
+        $("img").click(function(){
+        var t = $(this).attr("src");
+        $(".modal-body").html("<img src='"+t+"' class='modal-img'>");
+        $("#myModal").modal();
+      });
+      
+      $("video").click(function(){
+        var v = $("video > source");
+        var t = v.attr("src");
+        $(".modal-body").html("<video class='model-vid' controls><source src='"+t+"' type='video/mp4'></source></video>");
+        $("#myModal").modal();  
+      });
+    //   });//EOF Document.ready
+    
 })(jQuery);
 

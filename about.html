@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +33,74 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+
+<style>
+    ul {
+        margin-left: 0;
+        padding: 0;
+        font-family: 'Karla', sans-serif;
+    }
+
+    .question,
+    .answer {
+        list-style-type: none;
+    }
+
+    .question {
+        border-top: 1px solid grey;
+        padding: 0.5em 1em 0.5em 3em;
+        font-weight: bold;
+        position: relative;
+    }
+
+    ul:last-child {
+        border-bottom: 1px solid grey;
+    }
+
+    .question:hover {
+        cursor: pointer;
+    }
+
+    .answer {
+        display: none;
+        padding: 1em 0.5em 2.5em;
+    }
+
+    .expand-bar {
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        transition: all 0.5s ease;
+    }
+
+    .expand-bar,
+    .expand-bar:after {
+        width: 15px;
+        height: 2px;
+        background-color: red;
+    }
+
+    .expand-bar:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: rotate(90deg);
+        transition: all 0.5s ease;
+    }
+
+    .open {
+        border-bottom: none;
+    }
+
+    .open .expand-bar {
+        transform: rotate(180deg);
+    }
+
+    .open .expand-bar:after {
+        transform: rotate(180deg);
+    }
+</style>
 
 <body>
     <!-- Spinner Start -->
@@ -64,13 +132,14 @@
                     <small>+91 98945 41219, +91 94891 21919</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" target="_blank"
+                        href="https://www.facebook.com/KMSolarEnergyPlus?mibextid=ZbWKwL"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-                            class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+                    <!--a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-twitter"></i></a>-->
+                    <!--a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-linkedin-in"></i></a>-->
+                    <a class="btn btn-square btn-link rounded-0" target="_blank"
+                        href="https://instagram.com/kmsolarenergyplus?igshid=MmU2YjMzNjRlOQ=="><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -81,7 +150,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <img class="img-fluid" src="img/logo.png" alt="" style="height: 25px; width: 25px;">
+            <img class="img-fluid" src="img/logo.png" alt="" style="height: 90px; width: 80px;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -196,7 +265,7 @@
         <div class="container about px-lg-0">
             <div class="row g-0 mx-lg-0">
                 <div class="deck">
-                    <div class="card-space col-4">
+                    <div class="card-space col-6">
                         <div class="card">
                             <div class="face front">
                                 <i class="fa fa-eye" style="font-size:150px; color:white;"></i>
@@ -213,7 +282,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-space col-4">
+                    <div class="card-space col-6">
                         <div class="card">
                             <div class="face front">
                                 <i class="fa fa-bullseye" style="font-size:150px; color:white;"></i>
@@ -232,31 +301,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-space col-4">
-                        <div class="card">
-                            <div class="face front">
-                                <i class="fa fa-handshake" style="font-size:150px; color:white;"></i>
-                                <h2 style="color:white;">Value</h2>
-                            </div>
-                            <div class="face back">
-                                <h2 style="text-align: center; color:white;">Our Value<h2></h2>
-                                    <h5 style="text-align: center; color:white;">“To provide Reliable and Quality Energy
-                                        to society through cost effective
-                                        and renewable energy sources in the most efficient manner and make the planet
-                                        emission
-                                        free."</h5>
-                                    <p style="color:white;">At KMD Solar Energy+, our mission is to provide society with
-                                        reliable and quality solar
-                                        power through cost-effective renewable energy sources.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Vision & Mission End -->
-
 
     <!-- Team Start -->
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
@@ -271,8 +320,11 @@
                             <div class="col-12">
                                 <div class="d-flex align-items-center">
                                     <div class="ms-4">
-                                        <h4 class="text-primary">Expertise</h4>
-                                        <p class="mb-0">Our team comprises highly skilled professionals with extensive
+                                        <h4 class="text-primary question" id="question">
+                                            <div class="expand-bar"></div>Expertise
+                                        </h4>
+                                        <p class="mb-0 answer">Our team comprises highly skilled professionals with
+                                            extensive
                                             experience in the solar power industry. We have the knowledge and expertise
                                             to handle projects of all sizes and complexities, ensuring exceptional
                                             results.</p>
@@ -282,8 +334,11 @@
                             <div class="col-12">
                                 <div class="d-flex align-items-center">
                                     <div class="ms-4">
-                                        <h4 class="text-primary" class="mb-0">Customer Service</h4>
-                                        <p class="mb-0">At KMD Solar Energy+, we prioritize customer satisfaction. We go
+                                        <h4 class="text-primary question">
+                                            <div class="expand-bar"></div>Customer Service
+                                        </h4>
+                                        <p class="mb-0 answer">At KMD Solar Energy+, we prioritize customer
+                                            satisfaction. We go
                                             above and beyond to exceed our clients' expectations, offering outstanding
                                             customer service, flexibility, and excellent value.</p>
                                     </div>
@@ -292,8 +347,11 @@
                             <div class="col-12">
                                 <div class="d-flex align-items-center">
                                     <div class="ms-4">
-                                        <h4 class="text-primary">Efficiency</h4>
-                                        <p class="mb-0">We are committed to enhancing the functionality and operational
+                                        <h4 class="text-primary question">
+                                            <div class="expand-bar"></div>Efficiency
+                                        </h4>
+                                        <p class="mb-0 answer">We are committed to enhancing the functionality and
+                                            operational
                                             efficiency of solar power systems. Our team works diligently to ensure that
                                             all phases of the project are completed within budget and time schedule,
                                             minimizing any disruptions.</p>
@@ -303,8 +361,11 @@
                             <div class="col-12">
                                 <div class="d-flex align-items-center">
                                     <div class="ms-4">
-                                        <h4 class="text-primary"">Sustainability</h4>
-                                        <p class=" mb-0">By choosing KMD Solar Energy+, you contribute to a sustainable
+                                        <h4 class="text-primary question">
+                                            <div class="expand-bar"></div>Sustainability
+                                        </h4>
+                                        <p class="mb-0 answer">By choosing KMD Solar Energy+, you contribute to a
+                                            sustainable
                                             future. Our use of renewable energy sources helps reduce carbon emissions
                                             and dependence on fossil fuels, leading to a greener and cleaner planet.</p>
                                     </div>
@@ -315,8 +376,7 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about-right-side.png"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/about-right-side.png" alt="">
                     </div>
                 </div>
             </div>
@@ -339,11 +399,11 @@
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>kmdevelopersslm@gmail.com</p>
                     <div class="d-flex pt-2">
                         <!--a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>-->
-                        <a class="btn btn-square btn-outline-light btn-social"
+                        <a class="btn btn-square btn-outline-light btn-social" target="_blank"
                             href="https://www.facebook.com/KMSolarEnergyPlus?mibextid=ZbWKwL"><i
                                 class="fab fa-facebook-f"></i></a>
                         <!--a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
-                        <a class="btn btn-square btn-outline-light btn-social"
+                        <a class="btn btn-square btn-outline-light btn-social" target="_blank"
                             href="https://instagram.com/kmsolarenergyplus?igshid=MmU2YjMzNjRlOQ=="><i
                                 class="fab fa-instagram"></i></a>
                     </div>
@@ -381,11 +441,18 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">KMD Solar Energy+ Brochure</h5>
-                    <a href="service.html" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Click to
+                    <a href="img/pdf/solar-brochure-final.pdf"
+                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft" target="_blank"
+                        attributes-list download="Solar Brochure">Click to
                         Download</a>
                     <h5 class="text-white mb-4" style="top: 10px;position: relative;">Scan Me for More Update</h5>
-                    <img src="img/fb-qr.png" alt="Facebook QR Code">
-                    <img src="img/insta-qr.png" style="left: 35px; position: relative;" alt="Instaram QR Code" tooltip>
+                    <img src="img/fb-qr.png" alt="Facebook QR Code" title="Facebook">
+                    <img src="img/insta-qr.png" style="left: 35px; position: relative;" alt="Instaram QR Code"
+                        title="Instagram">
+                    <i class="fab fa-facebook-square" title="Facebook" aria-hidden="true"
+                        style="font-size: 40px;background: #3B5998; color: white;top: 90px; position: relative; right: 175px;"></i>
+                    <i class="fab fa-instagram" title="Instagram" aria-hidden="true"
+                        style="font-size: 40px;background: #3B5998; color: white;top: 90px; position: relative; right: 70px;"></i>
                     <div class="position-relative mx-auto" style="max-width: 400px; top:70px">
                     </div>
                 </div>
@@ -421,6 +488,8 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>

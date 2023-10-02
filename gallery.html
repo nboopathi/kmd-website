@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +33,79 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+
+<style>
+    h1 {
+        font-family: Satisfy;
+        font-size: 50px;
+        text-align: center;
+        color: black;
+        padding: 1%;
+    }
+
+    #gallery {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+
+    @media (max-width:1200px) {
+        #gallery {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+            column-gap: 20px;
+        }
+    }
+
+    @media (max-width:800px) {
+        #gallery {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+            column-gap: 20px;
+        }
+    }
+
+    @media (max-width:600px) {
+        #gallery {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+        }
+    }
+
+    #gallery img,
+    #gallery video {
+        width: 100%;
+        height: auto;
+        margin: 4% auto;
+        box-shadow: -3px 5px 15px #000;
+        cursor: pointer;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .modal-img,
+    .model-vid {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-body {
+        padding: 0px;
+    }
+</style>
 
 <body>
     <!-- Spinner Start -->
@@ -64,13 +137,14 @@
                     <small>+91 98945 41219, +91 94891 21919</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" target="_blank"
+                        href="https://www.facebook.com/KMSolarEnergyPlus?mibextid=ZbWKwL"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-                            class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+                    <!--a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-twitter"></i></a>-->
+                    <!--a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-linkedin-in"></i></a>-->
+                    <a class="btn btn-square btn-link rounded-0" target="_blank"
+                        href="https://instagram.com/kmsolarenergyplus?igshid=MmU2YjMzNjRlOQ=="><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -81,7 +155,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <img class="img-fluid" src="img/logo.png" alt="" style="height: 25px; width: 25px;">
+            <img class="img-fluid" src="img/logo.png" alt="" style="height: 90px; width: 80px;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -102,9 +176,50 @@
 
     <!-- Page Header Start -->
     <div class="container-fluid">
-        <img class="img-fluid" src="img/head-about.png" alt="About us" style="width: 100%;">
+        <img class="img-fluid" src="img/head-gallery.png" alt="About us" style="width: 100%;">
     </div>
     <!-- Page Header End -->
+
+    <!-- Gallery Start -->
+    <h1 class="text-primary">Our Image Gallery</h1>
+    <div id="gallery" class="container-fluid">
+        <img src="img/gallery/1.png" class="img-responsive">
+        <img src="img/gallery/2.png" class="img-responsive">
+        <img src="img/gallery/3.png" class="img-responsive">
+        <img src="img/gallery/4.png" class="img-responsive">
+        <img src="img/gallery/5.png" class="img-responsive">
+        <img src="img/gallery/6.png" class="img-responsive">
+        <img src="img/gallery/7.png" class="img-responsive">
+        <img src="img/gallery/8.png" class="img-responsive">
+        <img src="img/gallery/9.png" class="img-responsive">
+        <img src="img/gallery/10.png" class="img-responsive">
+        <img src="img/gallery/11.png" class="img-responsive">
+        <img src="img/gallery/12.png" class="img-responsive">
+        <img src="img/gallery/13.png" class="img-responsive">
+        <img src="img/graphics/1.png" class="img-responsive">
+        <img src="img/graphics/2.jpg" class="img-responsive">
+        <video class="vid" controls>
+            <source src="img/video/1.mp4" type="video/mp4">
+            </source>
+        </video>
+        <video class="vid" controls>
+            <source src="img/video/2.mp4" type="video/mp4">
+            </source>
+        </video>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Gallery End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -120,11 +235,11 @@
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>kmdevelopersslm@gmail.com</p>
                     <div class="d-flex pt-2">
                         <!--a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>-->
-                        <a class="btn btn-square btn-outline-light btn-social"
+                        <a class="btn btn-square btn-outline-light btn-social" target="_blank"
                             href="https://www.facebook.com/KMSolarEnergyPlus?mibextid=ZbWKwL"><i
                                 class="fab fa-facebook-f"></i></a>
                         <!--a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
-                        <a class="btn btn-square btn-outline-light btn-social"
+                        <a class="btn btn-square btn-outline-light btn-social" target="_blank"
                             href="https://instagram.com/kmsolarenergyplus?igshid=MmU2YjMzNjRlOQ=="><i
                                 class="fab fa-instagram"></i></a>
                     </div>
@@ -162,11 +277,18 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">KMD Solar Energy+ Brochure</h5>
-                    <a href="service.html" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Click to
+                    <a href="img/pdf/solar-brochure-final.pdf"
+                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft" target="_blank"
+                        attributes-list download="Solar Brochure">Click to
                         Download</a>
                     <h5 class="text-white mb-4" style="top: 10px;position: relative;">Scan Me for More Update</h5>
-                    <img src="img/fb-qr.png" alt="Facebook QR Code">
-                    <img src="img/insta-qr.png" style="left: 35px; position: relative;" alt="Instaram QR Code" tooltip>
+                    <img src="img/fb-qr.png" alt="Facebook QR Code" title="Facebook">
+                    <img src="img/insta-qr.png" style="left: 35px; position: relative;" alt="Instaram QR Code"
+                        title="Instagram">
+                    <i class="fab fa-facebook-square" title="Facebook" aria-hidden="true"
+                        style="font-size: 40px;background: #3B5998; color: white;top: 90px; position: relative; right: 175px;"></i>
+                    <i class="fab fa-instagram" title="Instagram" aria-hidden="true"
+                        style="font-size: 40px;background: #3B5998; color: white;top: 90px; position: relative; right: 70px;"></i>
                     <div class="position-relative mx-auto" style="max-width: 400px; top:70px">
                     </div>
                 </div>
@@ -202,6 +324,8 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
