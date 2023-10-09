@@ -207,8 +207,15 @@
     }
 
     .font-size {
-        font-size: 20px !important;
+        font-size: 14px !important;
         width: 275px !important;
+    }
+
+    .padding-read {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important; 
+        padding-right: 1rem !important; 
+        padding-left: 1rem !important;
     }
 }
 
@@ -670,6 +677,8 @@
     }
 }
 
+/* Vision & Mission End */
+
 .font-size{
     width: 600px;
     font-size: 2.5rem;
@@ -679,4 +688,9 @@
     text-align: justify;
 }
 
-/* Vision & Mission End */
+/* .padding-read {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important; 
+    padding-right: 3rem !important; 
+    padding-left: 3rem !important;
+} */
