@@ -28,9 +28,12 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
 
+    <link rel="stylesheet" href="https://freyrenergy.com/wp-content/themes/custom-theme/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://freyrenergy.com/wp-content/themes/custom-theme/lib/styles.css">
     <!-- Template Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -89,8 +92,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link active">Service</a>
-                <a href="vechile.html" class="nav-item nav-link">Vechile</a>
+                <a href="service.html" class="nav-item nav-link active">Product & Services</a>
                 <a href="project.html" class="nav-item nav-link">Projects Highlighted</a>
                 <a href="client.html" class="nav-item nav-link">Clients</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -137,7 +139,7 @@
                                 <i class="fa fa-solar-panel fa-3x"></i>
                             </div>
                             <h4 class="mb-3">Rooftop Solar Installations</h4>
-                            <p class="justify">At <b>KM Developers</b>, we are committed to harnessing the power of the sun to provide sustainable and cost-effective energy solutions for your home or business. With our expertise in rooftop solar installations, we help you take control of your energy consumption while contributing to a greener planet. Explore the benefits of solar energy and why <b>KM Developers</b> is your trusted partner in making the switch to clean, renewable power.</p>
+                            <p class="justify">At <b style="color: #32C36C;">KM Developers</b>, we are committed to harnessing the power of the sun to provide sustainable and cost-effective energy solutions for your home or business. With our expertise in rooftop solar installations, we help you take control of your energy consumption while contributing to a greener planet. Explore the benefits of solar energy and why <b style="color: #32C36C;">KM Developers</b> is your trusted partner in making the switch to clean, renewable power.</p>
                             <!-- <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a> -->
                         </div>
                     </div>
@@ -160,12 +162,155 @@
     </div>
     <!-- Service End -->
 
+    <!-- Calculation Start -->
+    <a href="#"  id="backToTop">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+        </svg> -->
+    </a>
+
+
+
+    <section style="background-image: url(https://freyrenergy.com/wp-content/uploads/2024/03/solar.svg)" id="calculator" class="calculator_section main_spacer light_bg">
+        <div class="container">
+            <div class="row row-gap-4">
+                <div class="col-lg-7 z-2">
+                    <div class="d-flex h-100 justify-content-center flex-column">
+                        <h2 class="sec_heading lh-1">Calculate Your Savings</h2>
+                        <p class="body_font text-white">Explore the Potential of Solar Energy and Start Saving From Day 1!</p>
+                        <div class="pe-lg-5 mt-lg-5 mt-3">
+                            <div class="hstack input_wrapper mb-3">
+                                <div class="icon_wrapper px-3 align-self-stretch d-flex align-items-center">
+                                    <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/03/solar-panel.png" alt="solar panel" title="solar panel" loading="lazy" >							</div>
+                                <div class="position-relative w-100">
+                                    <div drop-down class="position-relative">
+                                        <label>Do You Need Solar For</label>
+                                        <input id="solarForToggler" readonly value="Home" type="text">
+                                        <div class="absolute_block position-absolute">
+                                            <a href="javascript:void(0);">Home</a>
+                                            <a href="javascript:void(0);">Commercial</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input id="inputToggler" class="d-none" type="checkbox">
+
+                            <div class="hstack input_wrapper mb-3">
+                                <div class="icon_wrapper px-3 align-self-stretch d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
+                                    </svg>
+                                </div>
+                                <div class="position-relative w-100">
+                                    <label>Enter Your Monthly Electricity Bill (in ₹)</label>
+                                    <input id="billInput" value="2500" min="500" type="number">
+                                </div>
+                            </div>
+
+                            <div class="hstack input_wrapper mb-3">
+                                <div class="icon_wrapper px-3 align-self-stretch d-flex align-items-center">
+                                    <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-system.png" alt="solar system" title="solar system" loading="lazy" >							</div>
+                                <div class="position-relative w-100">
+                                    <label>Enter System Size (kW)</label>
+                                    <input id="systemSizeInput" value="1" min="1" type="number">
+                                </div>
+                            </div>
+
+                            <p class="text-white">Or calculate savings using <label for="inputToggler" class="fw-medium text-underline text_ter cursor-pointer"></label></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="vstack gap-3">
+                        <div class="hstack gap-3 align-items-stretch">
+                                                    <div class="block">
+                                <div class="hstack gap-3">
+                                    <div class="icon_wrapper">
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-home.png" alt="solar for home cost" title="solar for home cost" loading="lazy" >                                </div>
+                                    <div class="calc_title_wrap">
+                                                                            <p class="m-0 d-none right_commercial_title">System Size</p>
+                                                                            <p class="m-0 right_home_title">System Size</p>
+                                    </div>
+                                </div>
+                                <p class="m-0 fs-4 mt-3 fw-medium"><span id="systemSizeValue">250</span> kW</p>
+                            </div>
+                            <div class="block">
+                                <div class="hstack gap-3">
+                                    <div class="icon_wrapper">
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-system.png" alt="solar system" title="solar system" loading="lazy" >                                </div>
+                                    <div class="calc_title_wrap">
+                                                                            <p class="m-0 d-none right_commercial_title">Space Required</p>
+                                                                            <p class="m-0 right_home_title">Space Required</p>
+                                    </div>
+                                </div>
+                                <p class="m-0 fs-4 mt-3 fw-medium"><span id="spaceNeededValue">250</span> sqft</p>
+                            </div>
+                        </div>                            
+                        
+                        <div class="hstack gap-3 align-items-stretch">
+                            <div class="block">
+                                <div class="hstack gap-3">
+                                    <div class="icon_wrapper">
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-panel.png" alt="solar panel" title="solar panel" loading="lazy" >                                </div>
+                                    <div class="calc_title_wrap">
+                                                                            <p class="m-0 d-none right_commercial_title">Annual Energy Generated</p>
+                                                                            <p class="m-0 right_home_title">Annual Energy Generated</p>
+                                    </div>
+                                </div>
+                                <p class="m-0 fs-4 mt-3 fw-medium"><span id="energyGenValue">250</span> Units</p>
+                            </div>
+                            <div class="block">
+                                <div class="hstack gap-3">
+                                    <div class="icon_wrapper">
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/payback-icon.png" alt="solar price" title="solar price" loading="lazy" >                                </div>
+                                    <div class="calc_title_wrap">
+                                                                            <p class="m-0 d-none right_commercial_title">Annual Savings</p>
+                                                                            <p class="m-0 right_home_title">Annual Savings</p>
+                                    </div>
+                                </div>
+                                <p class="m-0 fs-4 mt-3 fw-medium">₹ <span id="savingsValue">2500</span></p>
+                            </div>
+                        </div>
+
+                        <div id="subsidyWrapper" class="hstack gap-3 align-items-stretch show_subsidy">
+                            <div class="block">
+                                <div class="hstack gap-3">
+                                    <div class="icon_wrapper">
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/rupee-icon.png" alt="1kw solar panel price" title="1kw solar panel price" loading="lazy" >                                </div>
+                                    <div class="calc_title_wrap">
+                                                                            <p class="m-0 d-none right_commercial_title">Price</p>
+                                                                            <p class="m-0 right_home_title">Price (Excluding Subsidy)</p>
+                                    </div>
+                                </div>
+                                <p class="m-0 fs-4 mt-3 fw-medium">₹ <span id="price">250</span></p>
+                            </div>
+                            <div class="block subsidy_block">
+                                <div class="hstack gap-3">
+                                    <div class="icon_wrapper">
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/zero-cost.png" alt="home solar system cost" title="home solar system cost" loading="lazy" >                                </div>
+                                    <div class="calc_title_wrap">
+                                                                            <p class="m-0 d-none right_commercial_title">Subsidy</p>
+                                                                            <p class="m-0 right_home_title">Subsidy</p>
+                                    </div>
+                                </div>
+                                <p class="m-0 fs-4 mt-3 fw-medium">₹ <span id="subsidyValue">2500</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>            
+    </section>
+    <!-- Calculation End -->
+
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h2 class="text-primary">Our Services</h2>
-                <!-- <h1 class="mb-4">What Our Clients Say!</h1> -->
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center">
@@ -204,7 +349,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
     <!-- Benefits  Start -->
@@ -381,7 +526,9 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-
+    <script src="https://freyrenergy.com/wp-content/themes/custom-theme/lib/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://freyrenergy.com/wp-content/themes/custom-theme/lib/jquery.min.js"></script> -->
+    <script src="https://freyrenergy.com/wp-content/themes/custom-theme/lib/script.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
