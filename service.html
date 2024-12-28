@@ -106,7 +106,7 @@
     <div class="container-fluid">
         <div class="owl-carousel-item position-relative">
             <img class="img-fluid" src="img/head-service.png" alt="">
-            <div class="owl-carousel-inner">
+            <div class="owl-carousel-inner-1">
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-10 col-lg-8">   
@@ -121,7 +121,7 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl  py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <!-- <h6 class="text-primary">Our Services</h6> -->
@@ -130,32 +130,55 @@
                     us to cater to a wide range of clients. </h4>
                     <h4 class="mb-4">Here are some of the key services we provide:</h4>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/service-rooftop.png" alt="">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-solar-panel fa-3x"></i>
+            <div class="row g-4 container-servce"> 
+                  <div class="column">
+                    <h3>Our Services</h3>
+                    <ul class="dropdown">
+                      <li data-target="content1">
+                        Rooftop Solar Installations <span class="arrow">&#10095;</span>
+                      </li>
+                      <li data-target="content2">
+                        Ground Mounted Solar Plant <span class="arrow">&#10095;</span>
+                      </li>
+                      <li data-target="content3">
+                        KMD Services <span class="arrow">&#10095;</span>
+                      </li>
+                      <li data-target="content4">
+                        Vehicle <span class="arrow">&#10095;</span>
+                      </li>
+                    </ul>
+                  </div>
+              
+                  <!-- Second Column: Details -->
+                  <div class="column details hidden" id="details">
+                    <h3 id="details-heading">Details</h3>
+                    <div id="details-content">
+                      <p>Content will appear here.</p>
+                    </div>                    
+                  </div>
+              
+                  <!-- Third Column: Image Preview -->
+                    <div class="column image-box hidden" id="image-box">
+                        <img src="https://via.placeholder.com/300" alt="Preview Image" id="preview-image">
+                        <!-- Carousel for Content 3 -->
+                        <!--  <div id="carousel-container" class="carousel" style="display: none;">
+                            <button class="carousel-arrow left" id="prev">&#8249;</button>
+                            <div class="carousel-images" id="carousel-images">
+                            <img src="img/vechile-1.png" alt="Image 1">
+                            <img src="img/vechile-2.png" alt="Image 2">
+                            <img src="img/vechile-3.png" alt="Image 3">
+                            <img src="img/vechile-4.png" alt="Image 4">
                             </div>
-                            <h4 class="mb-3">Rooftop Solar Installations</h4>
-                            <p class="justify">At <b style="color: #32C36C;">KM Developers</b>, we are committed to harnessing the power of the sun to provide sustainable and cost-effective energy solutions for your home or business. With our expertise in rooftop solar installations, we help you take control of your energy consumption while contributing to a greener planet. Explore the benefits of solar energy and why <b style="color: #32C36C;">KM Developers</b> is your trusted partner in making the switch to clean, renewable power.</p>
-                            <!-- <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a> -->
+                            <button class="carousel-arrow right" id="next">&#8250;</button>
+                        </div> -->
+                        
+                        <div id="custom-carousel" class="custom-carousel owl-carousel">
+                            <div class="custom-item"><img src="img/vechile-1.png" alt="Image 1"></div>
+                            <div class="custom-item"><img src="img/vechile-2.png" alt="Image 2"></div>
+                            <div class="custom-item"><img src="img/vechile-3.png" alt="Image 3"></div>
+                            <div class="custom-item"><img src="img/vechile-4.png" alt="Image 4"></div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/service-ground-mounted.png" alt="">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-wind fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Ground Mounted Solar Plant</h4>
-                            <p class="justify">Ground-mounted solar plants play a significant role in expanding renewable energy capacity and reducing greenhouse gas emissions by harnessing the power of the sun to generate electricity on a large scale. They are commonly used by utilities, energy companies, and governments as part of their efforts to transition to cleaner and more sustainable energy sources.</p>
-                            <!-- <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a> -->
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -171,20 +194,21 @@
 
 
 
-    <section style="background-image: url(https://freyrenergy.com/wp-content/uploads/2024/03/solar.svg)" id="calculator" class="calculator_section main_spacer light_bg">
+    <section style="background: #32C36C;" id="calculator" class="calculator_section main_spacer light_bg container-xxl py-5">
         <div class="container">
             <div class="row row-gap-4">
                 <div class="col-lg-7 z-2">
                     <div class="d-flex h-100 justify-content-center flex-column">
-                        <h2 class="sec_heading lh-1">Calculate Your Savings</h2>
-                        <p class="body_font text-white">Explore the Potential of Solar Energy and Start Saving From Day 1!</p>
+                        <h2 class="sec_heading lh-1">Calculate Your Solar Savings</h2>
+                        <p class="body_font text-white">Discover the Benefits of Solar Energy and Start Saving Right Away!</p>
                         <div class="pe-lg-5 mt-lg-5 mt-3">
                             <div class="hstack input_wrapper mb-3">
                                 <div class="icon_wrapper px-3 align-self-stretch d-flex align-items-center">
-                                    <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/03/solar-panel.png" alt="solar panel" title="solar panel" loading="lazy" >							</div>
+                                    <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/03/solar-panel.png" alt="solar panel" title="solar panel" loading="lazy">
+                                </div>
                                 <div class="position-relative w-100">
                                     <div drop-down class="position-relative">
-                                        <label>Do You Need Solar For</label>
+                                        <label>What Are You Looking For?</label>
                                         <input id="solarForToggler" readonly value="Home" type="text">
                                         <div class="absolute_block position-absolute">
                                             <a href="javascript:void(0);">Home</a>
@@ -193,9 +217,9 @@
                                     </div>
                                 </div>
                             </div>
-
+    
                             <input id="inputToggler" class="d-none" type="checkbox">
-
+    
                             <div class="hstack input_wrapper mb-3">
                                 <div class="icon_wrapper px-3 align-self-stretch d-flex align-items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
@@ -207,30 +231,32 @@
                                     <input id="billInput" value="2500" min="500" type="number">
                                 </div>
                             </div>
-
+    
                             <div class="hstack input_wrapper mb-3">
                                 <div class="icon_wrapper px-3 align-self-stretch d-flex align-items-center">
-                                    <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-system.png" alt="solar system" title="solar system" loading="lazy" >							</div>
+                                    <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-system.png" alt="solar system" title="solar system" loading="lazy">
+                                </div>
                                 <div class="position-relative w-100">
-                                    <label>Enter System Size (kW)</label>
+                                    <label>Enter Desired Solar System Size (kW)</label>
                                     <input id="systemSizeInput" value="1" min="1" type="number">
                                 </div>
                             </div>
-
-                            <p class="text-white">Or calculate savings using <label for="inputToggler" class="fw-medium text-underline text_ter cursor-pointer"></label></p>
+    
+                            <p class="text-white">Alternatively, calculate savings with <label for="inputToggler" class="fw-medium text-underline text_ter cursor-pointer"></label></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="vstack gap-3">
                         <div class="hstack gap-3 align-items-stretch">
-                                                    <div class="block">
+                            <div class="block">
                                 <div class="hstack gap-3">
                                     <div class="icon_wrapper">
-                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-home.png" alt="solar for home cost" title="solar for home cost" loading="lazy" >                                </div>
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-home.png" alt="solar for home cost" title="solar for home cost" loading="lazy">
+                                    </div>
                                     <div class="calc_title_wrap">
-                                                                            <p class="m-0 d-none right_commercial_title">System Size</p>
-                                                                            <p class="m-0 right_home_title">System Size</p>
+                                        <p class="m-0 d-none right_commercial_title">System Size</p>
+                                        <p class="m-0 right_home_title">System Size</p>
                                     </div>
                                 </div>
                                 <p class="m-0 fs-4 mt-3 fw-medium"><span id="systemSizeValue">250</span> kW</p>
@@ -238,49 +264,53 @@
                             <div class="block">
                                 <div class="hstack gap-3">
                                     <div class="icon_wrapper">
-                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-system.png" alt="solar system" title="solar system" loading="lazy" >                                </div>
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-system.png" alt="solar system" title="solar system" loading="lazy">
+                                    </div>
                                     <div class="calc_title_wrap">
-                                                                            <p class="m-0 d-none right_commercial_title">Space Required</p>
-                                                                            <p class="m-0 right_home_title">Space Required</p>
+                                        <p class="m-0 d-none right_commercial_title">Required Space</p>
+                                        <p class="m-0 right_home_title">Required Space</p>
                                     </div>
                                 </div>
                                 <p class="m-0 fs-4 mt-3 fw-medium"><span id="spaceNeededValue">250</span> sqft</p>
                             </div>
                         </div>                            
-                        
+    
                         <div class="hstack gap-3 align-items-stretch">
                             <div class="block">
                                 <div class="hstack gap-3">
                                     <div class="icon_wrapper">
-                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-panel.png" alt="solar panel" title="solar panel" loading="lazy" >                                </div>
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/solar-panel.png" alt="solar panel" title="solar panel" loading="lazy">
+                                    </div>
                                     <div class="calc_title_wrap">
-                                                                            <p class="m-0 d-none right_commercial_title">Annual Energy Generated</p>
-                                                                            <p class="m-0 right_home_title">Annual Energy Generated</p>
+                                        <p class="m-0 d-none right_commercial_title">Annual Energy Production</p>
+                                        <p class="m-0 right_home_title">Annual Energy Production</p>
                                     </div>
                                 </div>
-                                <p class="m-0 fs-4 mt-3 fw-medium"><span id="energyGenValue">250</span> Units</p>
+                                <p class="m-0 fs-4 mt-3 fw-medium"><span id="energyGenValue">250</span> kWh</p>
                             </div>
                             <div class="block">
                                 <div class="hstack gap-3">
                                     <div class="icon_wrapper">
-                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/payback-icon.png" alt="solar price" title="solar price" loading="lazy" >                                </div>
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/payback-icon.png" alt="solar price" title="solar price" loading="lazy">
+                                    </div>
                                     <div class="calc_title_wrap">
-                                                                            <p class="m-0 d-none right_commercial_title">Annual Savings</p>
-                                                                            <p class="m-0 right_home_title">Annual Savings</p>
+                                        <p class="m-0 d-none right_commercial_title">Annual Savings</p>
+                                        <p class="m-0 right_home_title">Annual Savings</p>
                                     </div>
                                 </div>
                                 <p class="m-0 fs-4 mt-3 fw-medium">₹ <span id="savingsValue">2500</span></p>
                             </div>
                         </div>
-
+    
                         <div id="subsidyWrapper" class="hstack gap-3 align-items-stretch show_subsidy">
                             <div class="block">
                                 <div class="hstack gap-3">
                                     <div class="icon_wrapper">
-                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/rupee-icon.png" alt="1kw solar panel price" title="1kw solar panel price" loading="lazy" >                                </div>
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/rupee-icon.png" alt="1kw solar panel price" title="1kw solar panel price" loading="lazy">
+                                    </div>
                                     <div class="calc_title_wrap">
-                                                                            <p class="m-0 d-none right_commercial_title">Price</p>
-                                                                            <p class="m-0 right_home_title">Price (Excluding Subsidy)</p>
+                                        <p class="m-0 d-none right_commercial_title">Price</p>
+                                        <p class="m-0 right_home_title">Price (Before Subsidy)</p>
                                     </div>
                                 </div>
                                 <p class="m-0 fs-4 mt-3 fw-medium">₹ <span id="price">250</span></p>
@@ -288,10 +318,11 @@
                             <div class="block subsidy_block">
                                 <div class="hstack gap-3">
                                     <div class="icon_wrapper">
-                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/zero-cost.png" alt="home solar system cost" title="home solar system cost" loading="lazy" >                                </div>
+                                        <img decoding="async" src="https://freyrenergy.com/wp-content/uploads/2024/06/zero-cost.png" alt="home solar system cost" title="home solar system cost" loading="lazy">
+                                    </div>
                                     <div class="calc_title_wrap">
-                                                                            <p class="m-0 d-none right_commercial_title">Subsidy</p>
-                                                                            <p class="m-0 right_home_title">Subsidy</p>
+                                        <p class="m-0 d-none right_commercial_title">Subsidy</p>
+                                        <p class="m-0 right_home_title">Subsidy</p>
                                     </div>
                                 </div>
                                 <p class="m-0 fs-4 mt-3 fw-medium">₹ <span id="subsidyValue">2500</span></p>
@@ -300,8 +331,6 @@
                     </div>
                 </div>
             </div>
-
-            
         </div>            
     </section>
     <!-- Calculation End -->

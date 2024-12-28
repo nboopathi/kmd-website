@@ -154,5 +154,132 @@
       });
     //   });//EOF Document.ready
     
-})(jQuery);
 
+
+
+// JavaScript for Dropdown Behavior
+const dropdownItems = document.querySelectorAll('.dropdown li');
+const detailsSection = document.getElementById('details');
+const imageBox = document.getElementById('image-box');
+const detailsHeading = document.getElementById('details-heading');
+const detailsContent = document.getElementById('details-content');
+const previewImage = document.getElementById('preview-image');
+const carouselContainer = document.getElementById('custom-carousel');
+
+let currentIndex = 0;
+detailsSection.style.display = 'none';
+imageBox.style.display = 'none';
+
+dropdownItems.forEach(item => {
+    item.addEventListener('click', () => {
+    $('.container-servce').css('width','100%');
+    // Show the details and image sections
+    detailsSection.classList.add('active');
+    imageBox.classList.add('active');
+
+    // Update content dynamically based on the clicked item
+    const target = item.getAttribute('data-target');
+    if (target === 'content1') {
+        detailsHeading.textContent = 'Rooftop Solar Installations';
+        detailsContent.innerHTML = `
+                                <p>Explore the benefits of solar energy and why <b style="color: #32C36C;">KM Developers</b>
+                                <ul>
+                                    <li>Rooftop Site Survey and Drawing.</li>
+                                    <li>Materials Supply and Arrangements</li>
+                                    <li>Flexible Loan Arrangements</li>
+                                    <li>Net Metering Policy</li>
+                                    <li>Solar Rooftop Installations & Commissioning</li>
+                                    <li>Maintenance Service and Monitoring</li>
+                                </ul>
+                            `;
+        previewImage.style.display = 'block';
+        detailsSection.style.display = 'block';
+        imageBox.style.display = 'block';
+        previewImage.src = 'img/service-rooftop.png';
+        carouselContainer.style.display = 'none'; // Hide carousel for other content
+    } else if (target === 'content2') {
+        detailsHeading.textContent = 'Ground Mounted Solar Plant';
+        detailsContent.innerHTML = `
+                                <p>Explore Technology Lab initiatives such as:</p>
+                                <ul>
+                                     <li>Pile Foundation with Module Erection</li>
+                                     <li>Construction of Civil Activities</li>
+                                     <li>Electrical DC Activities</li>
+                                     <li>Internal Road and Fencing</li>
+                                </ul>
+                            `;
+        previewImage.style.display = 'block';
+        detailsSection.style.display = 'block';
+        imageBox.style.display = 'block';
+        previewImage.src = 'img/service-ground-mounted.png';
+        carouselContainer.style.display = 'none'; // Hide carousel for other content
+    } else if (target === 'content3') {
+        detailsHeading.textContent = 'KMD Services';
+        detailsContent.innerHTML = `
+                                <p>Our Services:</p>
+                                <ul>
+                                    <li>Foundation of Renewable Energy</li>
+                                    <li>Construction of Civil Activities</li>
+                                    <li>Electrical DC Activities</li>
+                                    <li>Roads and Fencing Activities</li>
+                                </ul>
+                            `;
+        previewImage.style.display = 'block';
+        detailsSection.style.display = 'block';
+        imageBox.style.display = 'block';
+        previewImage.src = 'img/carousel-3.png';
+        carouselContainer.style.display = 'none'; // Hide carousel for other content
+    } else if (target === 'content4') {
+        detailsHeading.textContent = 'Vechiles';
+        detailsContent.innerHTML = `
+                                <p><b style="color: #32C36C;">KM Developers</b> tie up with Thamirabarani RMC Plants and SSS Blue Matel units of RSDCPL at Various location in Tamilnadu</p>
+                                <ul>
+                                    <li>Mobile Concrete Mixers - 3 unit</li>
+                                    <li>DTH Drilling Vehicles - 3 unit</li>
+                                    <li>Shuttering Materials with Scaffolding 5000 Sqft and Accessories</li>
+                                </ul>
+                            `;
+        previewImage.style.display = 'none';
+        detailsSection.style.display = 'block';
+        imageBox.style.display = 'block';
+        carouselContainer.style.display = 'block'; // Show carousel for content 3
+    }
+    });
+});
+
+$(document).ready(function () {
+    $("#custom-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: ["&#10094;", "&#10095;"], // New arrow symbols
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          },
+          1600: {
+            items: 1
+          }
+        }
+      });
+  });
+  document.querySelectorAll('.dropdown li').forEach(function (item) {
+    item.addEventListener('click', function () {
+        // Remove the 'open' class from all other list items
+        document.querySelectorAll('.dropdown li').forEach(function (li) {
+            if (li !== item) {
+                li.classList.remove('open');
+            }
+        });
+
+        // Toggle the 'open' class on the current list item
+        this.classList.toggle('open');
+    });
+  });
+})(jQuery);

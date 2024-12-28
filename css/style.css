@@ -146,6 +146,18 @@
 /*** Header ***/
 .owl-carousel-inner {
     position: absolute;
+    /* width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; */
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, .1);
+    bottom: 0;
+}
+
+.owl-carousel-inner-1 {
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -155,8 +167,143 @@
     background: rgba(0, 0, 0, .1);
 }
 
+/*  Service Css added  */
+.container-servce {
+    display: flex;
+    flex-wrap: wrap; /* Ensures columns wrap on smaller screens */
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    width: 35%; /* Full width for proper alignment */
+    max-width: 1200px; /* Optional: to limit container width */
+    margin: 0 auto; /* Center the container */
+    margin-left: 0px;
+  }
+  
+  .column {
+    flex: 1 1 calc(33.33% - 20px); /* Responsive columns: 3 per row */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    min-width: 300px; /* Minimum column width */
+  }
+  
+  .column.hidden {
+    display: none; /* Hide inactive columns */
+  }
+  
+  .details.active, .image-box.active {
+    display: block; /* Show active sections */
+  }
+  
+  .image-box img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  #details-heading {
+    font-size: 22px;
+  }
+  
+  #details-content {
+    font-size: 15px;
+  }
+  .dropdown {
+    list-style: none;
+    padding: 0;
+  }
+
+  .dropdown li {
+    cursor: pointer;
+    /* margin-bottom: 10px; */
+  }
+
+  /* .details, .image-box { */
+    /* display: none; Initially hidden */
+  /* } */
+  .custom-carousel .custom-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Arrow color */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Make circular */
+    width: 40px; /* Arrow container width */
+    height: 40px; /* Arrow container height */
+    display: flex; /* Flexbox for centering arrow */
+    align-items: center; /* Center arrow vertically */
+    justify-content: center; /* Center arrow horizontally */
+    position: absolute; /* Position relative to the carousel */
+    top: 50%; /* Move to the vertical center */
+    transform: translateY(-50%); /* Adjust for exact centering */
+    cursor: pointer; /* Pointer cursor */
+    z-index: 1000; /* Keep above other elements */
+  }
+  
+  .owl-nav .owl-prev {
+    left: -20px; /* Position to the left of the carousel */
+  }
+  
+  .owl-nav .owl-next {
+    right: -20px; /* Position to the right of the carousel */
+  }
+  
+  .owl-nav .owl-prev::before,
+  .owl-nav .owl-next::before {
+    content: ''; /* Hide any default content */
+  }
+  
+  .owl-nav .owl-prev::after,
+  .owl-nav .owl-next::after {
+    font-family: 'Font Awesome 5 Free'; /* Use a font icon if needed */
+    font-weight: 900;
+    font-size: 18px;
+  }
+  
+  .arrow {
+    float: right;
+}
 @media (max-width: 768px) {
-    .owl-carousel-inner {
+    .container-servce {
+        flex-direction: column;
+        padding-left: 0px;
+        width: 105%;
+    }
+
+    .arrow {
+        float: right;
+    }
+
+    .dropdown li {
+        position: relative;
+        /* border-bottom: 1px solid #ddd; */
+        padding: 10px;
+    }
+
+    .dropdown li .arrow {
+        position: absolute;
+        right: 0;
+        transform: rotate(0deg);
+        transition: transform 0.3s;
+    }
+    #details-heading{
+        font-size: 18px;
+    }
+    #details-content {
+        font-size: 14px;
+    }
+    .dropdown li.open .arrow {
+        transform: rotate(90deg);
+    }
+    .owl-carousel-inner-1 {
         width: 100%;
         height: 100%;
     }
@@ -208,7 +355,15 @@
 
     .font-size {
         font-size: 14px !important;
-        width: 275px !important;
+        /* width: 275px !important; */
+    }
+
+    .carousel-inner-wid {
+        background: #32C36C;
+        padding: 4px;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
+        margin: 10px;
     }
 
     .padding-read {
@@ -680,8 +835,17 @@
 /* Vision & Mission End */
 
 .font-size{
-    width: 600px;
-    font-size: 2.5rem;
+    /* width: 600px; */
+    font-size: 1.5rem;
+}
+
+.carousel-inner-wid {
+    background: #32C36C;
+    padding: 10px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 10px;
+    margin: 10px;
+    margin-bottom: 0px;
 }
 
 .justify {
@@ -694,3 +858,7 @@
     padding-right: 3rem !important; 
     padding-left: 3rem !important;
 } */
+
+.calculator_section .input_wrapper .icon_wrapper {
+    background-color: lightgray !important;
+}
