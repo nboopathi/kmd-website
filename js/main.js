@@ -187,7 +187,7 @@ function updateContent(target) {
         previewImage.style.display = 'block';
         detailsSection.style.display = 'block';
         imageBox.style.display = 'block';
-        previewImage.src = 'img/service-rooftop.png';
+        previewImage.src = 'img/service-rooftop-1.jpg';
         carouselContainer.style.display = 'none'; // Hide carousel for other content
     } else if (target === 'content3') {
         detailsHeading.textContent = 'Ground Mounted Solar Plant';
@@ -203,7 +203,7 @@ function updateContent(target) {
         previewImage.style.display = 'block';
         detailsSection.style.display = 'block';
         imageBox.style.display = 'block';
-        previewImage.src = 'img/service-ground-mounted.png';
+        previewImage.src = 'img/service-ground-mounted-1.jpg';
         carouselContainer.style.display = 'none'; // Hide carousel for other content
     } else if (target === 'content1') {
         detailsHeading.textContent = 'KMD Services';
@@ -219,7 +219,7 @@ function updateContent(target) {
         previewImage.style.display = 'block';
         detailsSection.style.display = 'block';
         imageBox.style.display = 'block';
-        previewImage.src = 'img/carousel-3.png';
+        previewImage.src = 'img/KMDServices-1.jpg';
         carouselContainer.style.display = 'none'; // Hide carousel for other content
     } else if (target === 'content4') {
         detailsHeading.textContent = 'Vehicles';
