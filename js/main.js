@@ -166,8 +166,8 @@ const previewImage = document.getElementById('preview-image');
 const carouselContainer = document.getElementById('custom-carousel');
 
 let currentIndex = 1; // Initially selected index
-detailsSection.style.display = 'none';
-imageBox.style.display = 'none';
+// detailsSection.style.display = 'none';
+// imageBox.style.display = 'none';
 
 // Function to update content based on the selected item
 function updateContent(target) {
@@ -282,4 +282,59 @@ $(document).ready(function () {
         }
     });
 });
+
+    const gallery = document.getElementById("gallery");
+
+    // Function to load images dynamically
+    function loadImages(path, total, formats) {
+        for (let i = 1; i <= total; i++) {
+            let imageAdded = false;
+    
+            for (const format of formats) {
+                const img = new Image();
+                img.src = `${path}${i}.${format}`;
+                img.className = "img-responsive";
+    
+                img.onload = function () {
+                    gallery.appendChild(img);
+                    imageAdded = true;
+                };
+    
+                if (imageAdded) break;
+            }
+        }
+    }
+    
+    // Function to load videos dynamically
+    function loadVideos(path, total, formats) {
+        for (let i = 1; i <= total; i++) {
+            let videoAdded = false;
+    
+            for (const format of formats) {
+                const video = document.createElement("video");
+                video.controls = true;
+                video.className = "vid";
+    
+                const source = document.createElement("source");
+                source.src = `${path}${i}.${format}`;
+                source.type = `video/${format}`;
+                video.appendChild(source);
+    
+                // Check if the video loads successfully
+                video.onloadeddata = function () {
+                    gallery.appendChild(video);
+                    videoAdded = true;
+                };
+    
+                if (videoAdded) break;
+            }
+        }
+    }
+    
+    // Load images from img/graphics/
+    loadImages("img/gallery/", 100, ["jpg", "png", "jpeg"]);
+    loadImages("img/graphics/", 10, ["jpg", "png", "jpeg"]); // Adjust the total count as needed
+    loadImages("img/vechile/", 10, ["jpg", "png", "jpeg"]);
+    // Load videos from img/video/
+    loadVideos("img/video/", 10, ["mp4", "mpeg4"]); // Adjust the total count as needed
 })(jQuery);
